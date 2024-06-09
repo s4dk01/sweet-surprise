@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niespodzianka dla Ciebie!</title>
     <style>
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e6f6;
+            text-align: center;
+            padding: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -46,27 +57,4 @@
         }
         setInterval(losoweSerduszko, 500); // Tworzy nowe serduszko co 0.5 sekundy
     </script>
-body, html {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
 
-.waves {
-  height: 100%;
-  background: linear-gradient(-45deg, #6db9ef, #7ce0f9, #83c0f4, #6db9ef);
-  background-size: 400% 400%;
-  animation: waveAnimation 15s ease infinite;
-}
-
-@keyframes waveAnimation {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
