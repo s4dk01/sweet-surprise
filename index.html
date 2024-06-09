@@ -57,11 +57,27 @@
         }
         setInterval(losoweSerduszko, 500); // Tworzy nowe serduszko co 0.5 sekundy
     </script>
-</body>
-</html>
-body {
-    background-image: url('tlo.jpg');
-    background-size: cover; /* Pokrywa całą dostępną przestrzeń, zachowując proporcje obrazka */
-    background-repeat: no-repeat; /* Zapobiega powtarzaniu się obrazka */
-    background-position: center; /* Centruje obrazek na stronie */
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.waves {
+  height: 100%;
+  background: linear-gradient(-45deg, #6db9ef, #7ce0f9, #83c0f4, #6db9ef);
+  background-size: 400% 400%;
+  animation: waveAnimation 15s ease infinite;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
