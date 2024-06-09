@@ -25,3 +25,37 @@
     <p>Kocham Cię każdego dnia bardziej!</p>
 </body>
 </html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatyczne Serduszka</title>
+    <style>
+        .serduszko {
+            position: absolute;
+            width: 50px;
+            animation: spadaj 5s linear infinite;
+        }
+        @keyframes spadaj {
+            from {
+                top: -50px;
+            }
+            to {
+                top: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function losoweSerduszko() {
+            const img = document.createElement('img');
+            img.src = 'ścieżka_do_obrazka_serduszka.jpg';
+            img.className = 'serduszko';
+            img.style.left = Math.random() * 100 + '%';
+            document.body.appendChild(img);
+            setTimeout(() => document.body.removeChild(img), 5000); // Usuwa serduszko po 5 sekundach
+        }
+        setInterval(losoweSerduszko, 500); // Tworzy nowe serduszko co 0.5 sekundy
+    </script>
+</body>
+</html>
